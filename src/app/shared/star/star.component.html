@@ -1,0 +1,15 @@
+<style type="text/css">
+	.starRate{ width: 86px; height: 15px; overflow: hidden; margin-top: 5px}
+	.starRate:hover{ cursor: pointer; }
+</style>
+<div class="crop"	 
+	 [title]="rating"
+	 (click)='onClick()'>
+	 <div class="starRate" [style.width.px]="starWidth">
+	 	<span class="glyphicon glyphicon-star"></span>
+	 	<span class="glyphicon glyphicon-star"></span>
+	 	<span class="glyphicon glyphicon-star"></span>
+	 	<span class="glyphicon glyphicon-star"></span>
+	 	<span class="glyphicon glyphicon-star"></span>
+	 </div>	
+</div>

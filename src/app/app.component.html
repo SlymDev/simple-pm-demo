@@ -1,0 +1,28 @@
+<div class="container">
+  <div style="text-align:center" class="row">
+    <h1>{{ appTitle }}</h1>
+  </div>
+  <div class="row">
+  	<nav class="navbar navbar-default">
+  		<div class="container-fluid">
+  			<a class="navbar-brand" style="margin-left: 0; padding: 0;">
+  				<img src="assets/logo.png" style="height: 100%; padding: 0;">
+  			</a>
+  			<ul class="nav navbar-nav">
+  				<li><a [routerLink]="['/welcome']">Home</a></li>
+  				<li><a [routerLink]="['/products']">Product List</a></li>
+  			</ul>
+  		</div>
+  	</nav>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+  		<router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+<footer class="clearfix" style="background-color: #333;">
+	<div class="container">
+		<p style="color: #fff; padding: 2em">© 2018 - SlymDev and Angular 5</p>
+	</div>
+</footer>

@@ -1,0 +1,51 @@
+<div class="panel panel-primary" *ngIf="product">
+  <div class="panel panel-heading">
+    {{pageTitle + ': ' + product.productName }}
+  </div>
+  <style type="text/css">
+    .hs{ font-weight: bold; }
+    .fs, .hs{ font-size: 18px; }
+  </style>
+  <div class="panel-body">
+  	<div class="row">
+  		<div class="col-md-6" >
+  			<div class="row">
+  				<div class="col-md-3 hs">Name:</div>
+  				<div class="col-md-6 fs">{{product.productName}}</div>
+  			</div>
+  			<div class="row">
+  				<div class="col-md-3 hs">Code:</div>
+  				<div class="col-md-6 fs">{{product.productCode}}</div>
+  			</div>
+  			<div class="row">
+  				<div class="col-md-3 hs">Description:</div>
+  				<div class="col-md-6 fs">{{product.description}}</div>
+  			</div>
+  			<div class="row">
+  				<div class="col-md-3 hs">Availability:</div>
+  				<div class="col-md-6 fs">{{product.releaseDate}}</div>
+  			</div>
+  			<div class="row">
+  				<div class="col-md-3 hs">Price:</div>
+  				<div class="col-md-6 fs">{{product.price|currency:'USD':'$'}}</div>
+  			</div>
+        <div class="row">
+          <div class="col-md-3 hs">Rate:</div>
+          <div class="col-md-6"><app-star [rating]="product.starRating"></app-star></div>         
+        </div>
+  		</div>
+  		<div class="col-md-6">
+  			<div class="row">
+  				<div class="col-md-6">
+  					<img [src]="product.imageUrl" [title]="product.productName" [alt]="product.productName" class="img-responsive">
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+  <div class="panel-footer">
+  	<a class="btn btn-default" (click)='onBack()' style="width: 80px">
+  		<i class="glyphicon glyphicon-chevron-left"></i> Back
+  	</a>
+  </div>
+</div>
